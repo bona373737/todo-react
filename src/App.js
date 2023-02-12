@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes,Route, Navigate } from "react-router-dom";
+//components
+import Singup from "./Singup";
+import Singin from './Singin';
+import Todo from "./Todo";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Navigate replace to="/signin"/>}/>
+        <Route path="/signin" element={<Singin/>}/>
+        <Route path="/signup" element={<Singup/>}/>
+        <Route path="/todo" element={<Todo/>}/>
+      </Routes>
     </div>
-  );
+  );  
 }
 
 export default App;
