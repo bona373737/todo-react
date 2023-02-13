@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const TodoContainer =styled.div`
@@ -6,6 +8,13 @@ const TodoContainer =styled.div`
 
 
 const Todo =()=>{
+    const navigate = useNavigate();
+    useEffect(()=>{
+        if(!localStorage.getItem("LOGIN_JWT")){
+            navigate("/signin")
+        }
+    },[])
+
     return(
         <TodoContainer>
             <form>

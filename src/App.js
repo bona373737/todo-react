@@ -1,8 +1,8 @@
 import { Routes,Route, Navigate } from "react-router-dom";
 //components
-import Singup from "./Singup";
-import Singin from './Singin';
-import Todo from "./Todo";
+import Singup from "./View/Singup";
+import Singin from './View/Singin';
+import Todo from "./View/Todo";
 
 
 function App() {

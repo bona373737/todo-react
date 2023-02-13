@@ -8,11 +8,12 @@ https://github.com/walking-sunset/selection-task
 - nodejs v16.18.0
 - react router dom v6
 
-
 ## 프로젝트의 실행 방법
 
 
 ## 데모 영상
+- ID:nana@nana.com
+- PW:12345678
 
 ## 체크리스트
 - [ ] 이메일,비밀번호 유효성검사
@@ -21,3 +22,4 @@ https://github.com/walking-sunset/selection-task
 - [ ] 로그인 성공시 /todo 경로로 이동
 - [ ] 로그인 API는 로그인이 성공했을 시 Response Body에 JWT를 포함해서 응답하고 응답받은 JWT는 로컬 스토리지에 저장
 - [ ] 리다이렉트처리
+
