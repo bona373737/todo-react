@@ -12,9 +12,7 @@ const SinginContainer = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        h1{
-            color: #4B0082;
-        }
+        margin: 40px 0;
     }
 `;
 
@@ -31,7 +29,6 @@ const Singin =()=>{
         e.preventDefault();
         // console.log(e.target.email.value);
         // console.log(e.target.password.value);
-     
         const inputValue ={
             email : e.target.email.value,
             password: e.target.password.value
@@ -40,7 +37,7 @@ const Singin =()=>{
         //로그인요청api전송->응답받은 JWT는 로컬 스토리지에 저장하고 "/todo"로 이동 
         await axios({
             method: 'post',
-            url: 'https://pre-onboarding-selection-task.shop/auth/signin',
+            url: '/auth/signin',
             data: inputValue
           })
           .then((data)=>{
@@ -56,7 +53,7 @@ const Singin =()=>{
     return(
         <SinginContainer>
             <div className='top'>
-                <h1>Sign In</h1>
+                <h1 className='title'>Sign In</h1>
                 <NavLink to="/signup">Sign Up</NavLink>
             </div>
             <CommonForm btnName="Sign In" onSubmitEvent={handleSignIn}></CommonForm>
