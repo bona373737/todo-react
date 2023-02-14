@@ -20,15 +20,6 @@ const FormContainer = styled.form`
             text-indent: 10px;
         }
     }
-    button{
-        width: 100px;
-        height: 30px;
-        border-radius: 8px;
-        margin: 10px;
-        background-color: #4B0082;
-        color: white;
-    }
-
 `;
 
 const CommonForm =({btnName,onSubmitEvent})=>{
@@ -60,9 +51,9 @@ const CommonForm =({btnName,onSubmitEvent})=>{
             </div>
             <div className="input_wrap">
                 <label htmlFor="password">password</label>
-                <input id="password" data-testid="password-input" onChange={onChangePassword}  />
+                <input type="password" id="password" data-testid="password-input" onChange={onChangePassword}  />
             </div>
-            <button data-testid="signup-button" disabled={btnStatus}>{btnName}</button>
+            <button className="btn" data-testid="signup-button" disabled={btnStatus}>{btnName}</button>
         </FormContainer>
     )
 }
