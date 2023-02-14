@@ -7,10 +7,11 @@ import CommonForm from '../components/CommonForm';
 const SingupContainer = styled.div`
     width: 600px;
     margin: auto;
-    
+
     h1{
-        color: #4B0082;
+        margin: 40px 0;
     }
+
 
 `;
 
@@ -34,19 +35,20 @@ const Singup =()=>{
         };
         
         //회원가입 api전송
-        let response
+        let response;
         try {
             response =  await axios({
                 method: 'post',
-                url: 'https://pre-onboarding-selection-task.shop/auth/signup',
-                headers: { "Content-Type": `application/json`},
+                url: '/auth/signup',
                 data: inputValue
               })
         } catch (error) {
             console.log(error)
         }
-        console.log(response);
-       
+        if(response.status===201){
+            alert(`${inputValue.email}님 회원가입 되었습니다.`)
+            navigate("/signin")
+        }
     }
 
 
