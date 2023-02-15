@@ -15,6 +15,4 @@ https://github.com/walking-sunset/selection-task
   PW:12345678
 
 ## 데모 영상
-
-
-
+![demo](https://user-images.githubusercontent.com/73373898/219060245-f2aaacbb-39ae-44d9-bc72-51a269741f01.gif)
