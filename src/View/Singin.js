@@ -56,7 +56,7 @@ const Singin =()=>{
                 <h1 className='title'>Sign In</h1>
                 <NavLink to="/signup">Sign Up</NavLink>
             </div>
-            <CommonForm btnName="Sign In" onSubmitEvent={handleSignIn}></CommonForm>
+            <CommonForm btnName="Sign In" btnId="signin-button"  onSubmitEvent={handleSignIn}></CommonForm>
         </SinginContainer>
     )
 }

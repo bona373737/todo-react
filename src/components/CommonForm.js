@@ -22,7 +22,7 @@ const FormContainer = styled.form`
     }
 `;
 
-const CommonForm =({btnName,onSubmitEvent})=>{
+const CommonForm =({btnName,onSubmitEvent,btnId})=>{
     const [btnStatus, setBtnStatus] = useState(false)
 
     const onChangeEmail=(e)=>{
@@ -53,7 +53,7 @@ const CommonForm =({btnName,onSubmitEvent})=>{
                 <label htmlFor="password">password</label>
                 <input type="password" id="password" data-testid="password-input" onChange={onChangePassword}  />
             </div>
-            <button className="btn" data-testid="signup-button" disabled={btnStatus}>{btnName}</button>
+            <button className="btn" data-testid={btnId} disabled={btnStatus}>{btnName}</button>
         </FormContainer>
     )
 }

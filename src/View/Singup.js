@@ -45,17 +45,14 @@ const Singup =()=>{
         } catch (error) {
             console.log(error)
         }
-        if(response.status===201){
-            alert(`${inputValue.email}님 회원가입 되었습니다.`)
-            navigate("/signin")
-        }
+        navigate("/signin")
     }
 
 
     return(
         <SingupContainer>
             <h1 className='title'>Sign Up</h1>
-            <CommonForm btnName="Sing Up" onSubmitEvent={handleSignUp}></CommonForm>
+            <CommonForm btnName="Sing Up" btnId="signup-button" onSubmitEvent={handleSignUp}></CommonForm>
         </SingupContainer>
     )
 
