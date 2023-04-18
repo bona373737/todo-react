@@ -63,46 +63,7 @@ const Todo =()=>{
     const [todoList, setTodoList]= useState();
     const inputRef = useRef(null);
 
-    const getTodoList = async()=>{
-        let res;
-        try {
-            res = await axios({
-                method: 'get',
-                url: '/todos',
-                headers:{
-                    Authorization:`Bearer ${localStorage.getItem("LOGIN_JWT")}`
-                }
-              })
-        } catch (error) {
-            console.log(error)
-        }
-        // console.log(res);
-        setTodoList(res.data);
-    }
-
-    const createTodo = async(e)=>{
-        e.preventDefault();
-        // console.log(e.target.newTodo.value);
-        let res;
-        try {
-            res = await axios({
-                method: 'post',
-                url: '/todos',
-                data: {
-                    "todo": e.target.newTodo.value
-                },
-                headers:{
-                    Authorization:`Bearer ${localStorage.getItem("LOGIN_JWT")}`
-                }
-              })
-        } catch (error) {
-            console.log(error)
-        }
-        // console.log(res);
-        getTodoList().then((data)=>{
-            setTodoList((data)=>data);
-        })
-    }
+    
 
     const handleComplete = async(e)=>{
         let res;

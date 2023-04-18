@@ -18,6 +18,7 @@ function App() {
         <Route path="/signin" element={<Singin/>}/>
         <Route path="/signup" element={<Singup/>}/>
         <Route path="/todo" element={<Todo/>}/>
+        {/* <Route path="*" element={<NotFound/>}/> */}
       </Routes>
     </div>
   );  

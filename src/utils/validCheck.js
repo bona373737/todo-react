@@ -1,6 +1,5 @@
 export const emailValidCheck =(email)=>{
     // console.log(obj.email.includes("@"));
-
     if(!email.includes("@")){
         throw new Error("email 형식이 올바르지 않습니다.");
     } 
